@@ -4,14 +4,14 @@ import { navLinks, restaurant } from "../data/siteContent";
 export default function Footer() {
   return (
     <footer id="contact" className="bg-stone-950 text-white">
-      <div className="section-shell py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.7fr_0.9fr_0.7fr]">
+      <div className="section-shell py-10 sm:py-14">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-[1.1fr_0.7fr_0.9fr_0.7fr]">
           <div>
             <a href="#home" className="inline-flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-orange-600 text-white">
                 <Utensils aria-hidden="true" size={22} />
               </span>
-              <span className="text-2xl font-black">{restaurant.name}</span>
+              <span className="text-xl font-black sm:text-2xl">{restaurant.name}</span>
             </a>
             <p className="mt-5 max-w-sm leading-7 text-stone-300">
               {restaurant.description}
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-stone-400">
+        <div className="mt-10 border-t border-white/10 pt-6 text-sm text-stone-400 sm:mt-12">
           <p>Copyright 2026 Savory Bites. All Rights Reserved.</p>
         </div>
       </div>

@@ -9,14 +9,14 @@ export default function MenuCard({ item }) {
           loading="lazy"
         />
       </div>
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
         <div className="flex items-start justify-between gap-4">
           <p className="text-sm font-bold uppercase text-orange-600">
             {item.category}
           </p>
           <p className="text-lg font-black text-stone-950">{item.price}</p>
         </div>
-        <h3 className="mt-3 text-xl font-black text-stone-950">{item.name}</h3>
+        <h3 className="mt-3 text-lg font-black text-stone-950 sm:text-xl">{item.name}</h3>
         <p className="mt-3 text-sm leading-6 text-stone-600">
           {item.description}
         </p>

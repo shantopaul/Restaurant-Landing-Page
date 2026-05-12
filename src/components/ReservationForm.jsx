@@ -74,7 +74,7 @@ export default function ReservationForm() {
   };
 
   return (
-    <section id="reservation" className="bg-white py-16 lg:py-24">
+    <section id="reservation" className="bg-white py-12 sm:py-16 lg:py-24">
       <div className="section-shell">
         <SectionHeader
           eyebrow="Reserve Your Table"
@@ -82,20 +82,20 @@ export default function ReservationForm() {
           description="Book your table today and enjoy a memorable dining experience with us."
         />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <aside className="rounded-lg bg-stone-950 p-8 text-white">
+        <div className="mt-8 grid gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <aside className="rounded-lg bg-stone-950 p-5 text-white sm:p-8">
             <p className="text-sm font-bold uppercase text-orange-300">
               Visit Savory Bites
             </p>
-            <h3 className="mt-4 text-3xl font-black">
+            <h3 className="mt-3 text-2xl font-black leading-tight sm:mt-4 sm:text-3xl">
               Warm service, fresh plates, relaxed evenings.
             </h3>
-            <p className="mt-4 leading-7 text-stone-300">
+            <p className="mt-3 leading-7 text-stone-300 sm:mt-4">
               Share your preferred date, time, and party size. Our team will
               prepare the right table experience for your visit.
             </p>
 
-            <div className="mt-8 space-y-5">
+            <div className="mt-6 space-y-4 text-sm leading-6 sm:mt-8 sm:space-y-5 sm:text-base">
               <div className="flex gap-3">
                 <MapPin className="mt-1 text-orange-300" aria-hidden="true" size={20} />
                 <span>{restaurant.location}</span>
@@ -120,11 +120,11 @@ export default function ReservationForm() {
           </aside>
 
           <form
-            className="rounded-lg border border-stone-200 bg-stone-50 p-6 shadow-sm sm:p-8"
+            className="rounded-lg border border-stone-200 bg-stone-50 p-5 shadow-sm sm:p-8"
             onSubmit={handleSubmit}
             noValidate
           >
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
               <Field id="name" label="Full Name">
                 <input
                   id="name"
@@ -231,7 +231,8 @@ export default function ReservationForm() {
 
             {success ? (
               <p className="mt-5 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-semibold text-emerald-700" role="status">
-                Thank you! Your reservation request has been submitted successfully.
+                Thank you! Your reservation request has been submitted
+                successfully.
               </p>
             ) : null}
 

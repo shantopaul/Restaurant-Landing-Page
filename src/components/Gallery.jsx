@@ -3,7 +3,7 @@ import { galleryImages } from "../data/galleryImages";
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="bg-white py-16 lg:py-24">
+    <section id="gallery" className="bg-white py-12 sm:py-16 lg:py-24">
       <div className="section-shell">
         <SectionHeader
           eyebrow="Food Gallery"
@@ -11,7 +11,7 @@ export default function Gallery() {
           description="Take a look at our delicious dishes and cozy dining atmosphere."
         />
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-3 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
           {galleryImages.map((item, index) => (
             <figure
               key={item.id}
@@ -22,7 +22,7 @@ export default function Gallery() {
               <img
                 src={item.image}
                 alt={item.alt}
-                className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+                className="h-56 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
                 loading="lazy"
               />
             </figure>
