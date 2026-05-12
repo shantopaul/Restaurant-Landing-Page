@@ -61,6 +61,13 @@ export default function ReservationForm() {
       return;
     }
 
+    const guestCount = Number(formData.guests);
+
+    if (!Number.isInteger(guestCount) || guestCount < 1 || guestCount > 20) {
+      setError("Please enter a guest count between 1 and 20.");
+      return;
+    }
+
     setFormData(initialFormData);
     setSuccess(true);
     setError("");
@@ -136,7 +143,8 @@ export default function ReservationForm() {
                 <input
                   id="email"
                   name="email"
-                  type="email"
+                  type="text"
+                  inputMode="email"
                   value={formData.email}
                   onChange={handleChange}
                   className={inputClass}
@@ -164,9 +172,9 @@ export default function ReservationForm() {
                 <input
                   id="guests"
                   name="guests"
-                  type="number"
-                  min="1"
-                  max="20"
+                  type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                   value={formData.guests}
                   onChange={handleChange}
                   className={inputClass}
@@ -179,11 +187,11 @@ export default function ReservationForm() {
                 <input
                   id="date"
                   name="date"
-                  type="date"
-                  min={today}
+                  type="text"
                   value={formData.date}
                   onChange={handleChange}
                   className={inputClass}
+                  placeholder={today}
                   required
                 />
               </Field>
@@ -192,10 +200,11 @@ export default function ReservationForm() {
                 <input
                   id="time"
                   name="time"
-                  type="time"
+                  type="text"
                   value={formData.time}
                   onChange={handleChange}
                   className={inputClass}
+                  placeholder="7:30 PM"
                   required
                 />
               </Field>
