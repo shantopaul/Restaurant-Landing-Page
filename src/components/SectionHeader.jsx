@@ -9,7 +9,7 @@ export default function SectionHeader({
   return (
     <div className={`mx-auto flex max-w-3xl flex-col ${alignment}`}>
       {eyebrow ? (
-        <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-600">
+        <p className="text-sm font-bold uppercase text-orange-600">
           {eyebrow}
         </p>
       ) : null}
