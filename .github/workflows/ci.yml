@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "feature-*"
+      - "chore-*"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  quality-check:
+    name: Quality Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Run lint
+        run: |
+          if npm run | grep -q " lint"; then
+            npm run lint
+          else
+            echo "Lint script not available in this historical commit. Skipping lint."
+          fi
+
+      - name: Build project
+        run: npm run build
