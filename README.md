@@ -87,37 +87,45 @@ The website was created from a client-style requirement document and implemented
 
 ```text
 Restaurant-Landing-Page/
-  .github/
-    workflows/
-      ci.yml
-  docs/
-    screenshots/
-      desktop-preview.jpg
-      mobile-preview.jpg
-  src/
-    components/
-      About.jsx
-      Footer.jsx
-      Gallery.jsx
-      Hero.jsx
-      Menu.jsx
-      MenuCard.jsx
-      Navbar.jsx
-      ReservationForm.jsx
-      SectionHeader.jsx
-      TestimonialCard.jsx
-      Testimonials.jsx
-    data/
-      galleryImages.js
-      menuItems.js
-      siteContent.js
-      testimonials.js
-    App.jsx
-    index.css
-    main.jsx
-  index.html
-  package.json
-  vite.config.js
+|-- .github/
+|   `-- workflows/
+|       `-- ci.yml                         # GitHub Actions quality workflow
+|
+|-- docs/
+|   `-- screenshots/
+|       |-- desktop-preview.jpg            # README preview: desktop layout
+|       `-- mobile-preview.jpg             # README preview: mobile layout
+|
+|-- src/
+|   |-- components/
+|   |   |-- Navbar.jsx                     # Sticky navigation and mobile menu
+|   |   |-- Hero.jsx                       # Hero headline, CTA buttons, stats, image
+|   |   |-- About.jsx                      # Restaurant story and feature highlights
+|   |   |-- Menu.jsx                       # Popular menu section wrapper
+|   |   |-- MenuCard.jsx                   # Reusable food menu card
+|   |   |-- Gallery.jsx                    # Responsive food gallery grid
+|   |   |-- Testimonials.jsx               # Testimonial section wrapper
+|   |   |-- TestimonialCard.jsx            # Reusable customer review card
+|   |   |-- ReservationForm.jsx            # Booking form, validation, success state
+|   |   |-- Footer.jsx                     # Contact details, hours, social links
+|   |   `-- SectionHeader.jsx              # Reusable section heading component
+|   |
+|   |-- data/
+|   |   |-- menuItems.js                   # Menu names, prices, categories, images
+|   |   |-- galleryImages.js               # Gallery image URLs and alt text
+|   |   |-- testimonials.js                # Customer review data
+|   |   `-- siteContent.js                 # Restaurant info, nav links, hero/about assets
+|   |
+|   |-- App.jsx                            # Main page section composition
+|   |-- index.css                          # Tailwind import and global styles
+|   `-- main.jsx                           # React app entry point
+|
+|-- index.html                             # Vite HTML template
+|-- package.json                           # Scripts and dependencies
+|-- package-lock.json                      # Locked dependency versions
+|-- vite.config.js                         # Vite and Tailwind plugin config
+|-- eslint.config.js                       # ESLint configuration
+`-- README.md                              # Project documentation
 ```
 
 ## Component Details
@@ -259,11 +267,47 @@ Responsive behavior includes:
 - Table availability system
 - Dark mode
 
+## Contributions
+
+Contributions are welcome. Anyone can suggest or work on:
+
+- New restaurant landing page sections
+- UI/UX improvements
+- Responsive design fixes
+- Accessibility improvements
+- Performance optimization
+- Reservation form enhancements
+- Documentation improvements
+- Bug fixes
+
+### How to Contribute
+
+1. Fork the repository.
+2. Create a new feature branch.
+3. Make the change with clean, readable code.
+4. Run the quality checks:
+
+```bash
+npm run lint
+npm run build
+```
+
+5. Open a pull request with a clear description of the change.
+
+### Contributors
+
+| Name | Email | Role |
+| --- | --- | --- |
+| Shanto Paul | [shanto@shantopaul.com](mailto:shanto@shantopaul.com) | Project Owner, Frontend Developer |
+
 ## Portfolio Description
 
 A modern restaurant landing page built with React.js and Tailwind CSS. It includes a responsive hero section, about section, menu cards, image gallery, customer testimonials, reservation form, and business footer. The project is structured with reusable React components and data-driven rendering, making it clean, scalable, and client-ready.
 
-## Author
+## Contact
 
 **Shanto Paul**  
-GitHub: [shantopaul](https://github.com/shantopaul)
+Frontend Developer  
+Email: [shanto@shantopaul.com](mailto:shanto@shantopaul.com)  
+GitHub: [github.com/shantopaul](https://github.com/shantopaul)  
+Website: [shantopaul.com](https://shantopaul.com)
