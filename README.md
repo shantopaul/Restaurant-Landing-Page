@@ -2,9 +2,9 @@
 
 A professional, fully responsive restaurant landing page for **Savory Bites**. This project is built as a client-ready frontend delivery for restaurant, cafe, bistro, and food business landing page work.
 
-## Live Demo
+**Live Website:** [restaurant-landing-page.shantopaul.com](https://restaurant-landing-page.shantopaul.com/)
 
-[View Live Website](https://restaurant-landing-page.shantopaul.com/)
+**Repository:** [github.com/shantopaul/Restaurant-Landing-Page](https://github.com/shantopaul/Restaurant-Landing-Page)
 
 ## Preview
 
