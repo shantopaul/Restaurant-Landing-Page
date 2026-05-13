@@ -18,9 +18,12 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Local project planning/client source files
+IMPLEMENTATION_PLAN.md
+Restaurant Landing Page Client Project Requirements.docx
+
 # Editor and OS files
 .DS_Store
 Thumbs.db
 .vscode/*
 !.vscode/extensions.json
-
